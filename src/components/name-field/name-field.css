@@ -1,0 +1,8 @@
+.name-field__error {
+    color: rgb(202, 108, 108);
+    font-size: 10px;
+}
+
+.name-field__input {
+    min-width: 250px;
+}

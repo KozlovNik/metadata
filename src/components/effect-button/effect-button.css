@@ -1,0 +1,19 @@
+.effect-button {
+    font-size: 14px;
+    background-color: rgb(202, 108, 108);
+    border: none;
+    margin: 2px;
+    width: 75px;
+    height: 35px;
+    color: seashell;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.effect-button:hover {
+    background-color: rgb(165, 75, 75);
+}
+
+.effect-button:active {
+    background-color: rgb(122, 29, 29);
+}

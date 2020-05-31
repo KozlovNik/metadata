@@ -1,0 +1,7 @@
+.loop {
+    display: inline-block;
+    float: left;
+    min-width: 300px;
+    width: 25%;
+    text-align: center;
+}

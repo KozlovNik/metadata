@@ -1,0 +1,13 @@
+.output-field__input{
+    min-height: 600px;
+    max-width: 300px;
+    width: 300px    ;
+}
+
+/* .output-field {
+    display: inline-block;
+    float: left;
+    min-width: 300px;
+    width: 25%;
+    text-align: center;
+} */

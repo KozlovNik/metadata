@@ -1,0 +1,7 @@
+.text-field__input {
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 300px;
+    min-height: 100px;
+    min-width: 250px;
+}
