@@ -7,7 +7,7 @@ import OutputField from '../output-field/output-field';
 const Output = (props) => {
     return (
         <div className="output">
-            <OutputField />
+            <OutputField {...props} />
             <EffectButton name="bold" />
             <EffectButton name="underline" />
             <EffectButton name="italic" />

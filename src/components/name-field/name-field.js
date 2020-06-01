@@ -11,7 +11,7 @@ export default class NameField extends Component {
         }
     }
 
-    onInput = (e) => {
+    onInputValidation = (e) => {
         const res = /^[0-9a-zA-Z\s_]*$/.test(e.target.value);
         this.setState(() => {
             return {
@@ -21,7 +21,8 @@ export default class NameField extends Component {
     }
 
     render() {
-        const { name } = this.props;
+        const { name, customTag, onInputChange } = this.props;
+        const {error} = this.state;
         return (
             <label className="name-field">
                 <div>{name}</div>
@@ -29,9 +30,12 @@ export default class NameField extends Component {
                     name="name-field__input"
                     type="text"
                     className="name-field__input"
-                    onInput={this.onInput} />
+                    onInput={(e) => {
+                        this.onInputValidation(e)
+                        onInputChange(e, customTag)
+                    }} />
                 <div className="name-field__error">
-                    {this.state.error &&
+                    {error &&
                         "Имя вопроса имеет русские буквы"}
                 </div>
             </label>

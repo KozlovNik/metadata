@@ -3,10 +3,17 @@ import React from 'react';
 import './answers-field.css';
 
 const AnswersField = (props) => {
+
+    const { name, customTag, onInputChange } = props;
+
     return (
         <label className="answers-field">
-            <div>{props.name}</div>
-            <textarea className="answers-field__input">
+            <div>{name}</div>
+            <textarea
+                onInput={(e) => {
+                    onInputChange(e, customTag)
+                }}
+                className="answers-field__input">
             </textarea>
         </label>
     )

@@ -4,12 +4,23 @@ import TextField from '../text-field/text-field';
 import AnswersField from '../answers-field/answers-field';
 import './loop.css';
 
-const Loop = () => {
+const Loop = (props) => {
+
+    const { onInputChange } = props;
     return (
         <div className="loop">
-            <NameField name="Имя лупа" />
-            <TextField name="Текст лупа" />
-            <AnswersField name="Варианты ответов лупа" />
+            <NameField
+                name="Имя лупа"
+                customTag="loopName"
+                onInputChange={onInputChange} />
+            <TextField
+                name="Текст лупа"
+                customTag="loopText"
+                onInputChange={onInputChange} />
+            <AnswersField
+                name="Варианты ответов лупа"
+                customTag="loopAnswers"
+                onInputChange={onInputChange} />
         </div>
     )
 };

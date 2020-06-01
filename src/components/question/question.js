@@ -6,12 +6,20 @@ import TypeField from '../type-field/type-field';
 import './question.css';
 
 const Question = (props) => {
+    const { onInputChange } = props;
+
     return (
         <div className="question">
-            <NameField name="Имя вопроса" />
-            <TextField name="Текст вопроса" />
+            <NameField name="Имя вопроса"
+                customTag="questionName"
+                onInputChange={onInputChange} />
+            <TextField name="Текст вопроса"
+                customTag="questionText"
+                onInputChange={onInputChange} />
             <TypeField />
-            <AnswersField name="Варианты ответов вопроса" />
+            <AnswersField name="Варианты ответов вопроса"
+                customTag="questionAnswers"
+                onInputChange={onInputChange} />
         </div>
     )
 };
